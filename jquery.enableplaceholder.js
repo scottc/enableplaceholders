@@ -15,7 +15,8 @@
 		
 		return this.each(function(){ var $this = $(this);
 			//initalize
-			$this.val($this.attr("placeholder"));
+			if($this.val() == "")
+				$this.val($this.attr("placeholder"));
 			 
 			//focus event handlers
 			$this.focus(function(){
