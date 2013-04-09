@@ -2,7 +2,7 @@
 *
 * @Author Scott Campbell
 * @Website github.com/scottc/
-* @Version 1.2a
+* @Version 1.3a
 *
 * Adding placeholder support for those browsers who don't support it yet.
 *
@@ -11,34 +11,38 @@
 (function ($) {
     $.fn.enableplaceholder = function () {
 
-        if ('placeholder' in document.createElement('input')) return this;
+        if ('placeholder' in document.createElement('input'))
+            return this;
 
         return this.each(function () {
             var $this = $(this);
-            //initalize
+            
             if ($this.val() == "")
                 $this.val($this.attr("placeholder"));
 
-            //focus event handlers
-            $this.focus(function () {
-                if ($this.val() == $this.attr("placeholder"))
-                    $this.val("");
-            }).blur(function () {
-                if ($this.val() == "")
+            $this
+                .focus(function () {
+                    if ($this.val() == $this.attr("placeholder"))
+                        $this.val("");
+                })
+                .blur(function () {
+                    if ($this.val() == "")
+                        $this.val($this.attr("placeholder"));
+                });
+
+            $this.closest("form")
+                .bind("reset", function () {
                     $this.val($this.attr("placeholder"));
-            });
-
-            //reset button fix
-            $this.closest("form").bind("reset", function () {
-                $this.val($this.attr("placeholder"));
-                return false;
-            });
-
-            //clear blank values on submit
-            $this.closest("form").bind("submit", function () {
-                if ($this.val() == $this.attr("placeholder"))
-                    $this.val("");
-            });
+                    return false;
+                })
+                .bind("submit", function () {
+                    if ($this.val() == $this.attr("placeholder")){
+                        $this.val("");
+                        setTimeout(function(){
+                            $this.val($this.attr("placeholder"));
+                        }, 0);
+                    }
+                });
         });
     };
 })(jQuery);
