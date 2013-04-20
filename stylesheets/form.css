@@ -4,13 +4,11 @@ label{
 }
 div.field{
 	margin:10px 5px;
-	width:200px;
 }
 fieldset{
 	-webkit-border-radius:5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-
 }
 input, textarea{
 	border:1px solid #888;
@@ -38,11 +36,10 @@ margin:5px;
 }
 
 input:focus, textarea:focus{
-	   -moz-box-shadow: 0 0 8px #99f, inset 0 0 5px #fff;
-	-webkit-box-shadow: 0 0 8px #99f, inset 0 0 5px #fff;
-			box-shadow: 0 0 8px #99f, inset 0 0 5px #fff;
-		
+	   -moz-box-shadow: 0 0 8px #ddf, inset 0 0 5px #fff;
+	-webkit-box-shadow: 0 0 8px #ddf, inset 0 0 5px #fff;
+			box-shadow: 0 0 8px #ddf, inset 0 0 5px #fff;
+			
 		border:1px solid #777;
-		
 		color:#000;
 }
