@@ -14,7 +14,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     
-    <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
     <script src="javascripts/jquery.enableplaceholder-1.3.0.js"></script>
     
     <script>
@@ -41,7 +41,7 @@
         <section id="main-content">
         
         <h3>About</h3>
-        <p>The enableplaceholder jQuery plugin, will add placeholder <code>attribute</code> support for older browsers that do not have full HTML5 support, such as Internet Explorer 7.</p>
+        <p>The enableplaceholder jQuery plugin, will add <code>placeholder</code> attribute support for older browsers that do not have full HTML5 support, such as Internet Explorer 7.</p>
         
         <h3>How it works</h3>
         <ol>
@@ -56,6 +56,7 @@
         	<li>Prevents the browser from POSTing placeholder text as form values.</li>
         	<li>Does not depend on <code>&lt;label /&gt;</code>'s, or other elements.</li>
         	<li>Support's <code>&lt;input type="reset" /&gt;</code> buttons.</li>
+        	<li>Feature detection, not browser detection.</li>
         	<li>Free to use for any purpose, GPLv3 License.</li>
         </ul>
         
@@ -81,17 +82,17 @@
 				<legend>Example Form</legend>
 				
 				<div class="field">
-					<label for="username">&lt;input type="text" /&gt; example</label>
+					<label for="username"><code>&lt;input type="text" /&gt;</code> example</label>
 					<input id="username" type="text" placeholder="Username" />
 				</div>
 				
 				<div class="field">
-					<label for="password">&lt;input type="password" /&gt; example</label>
+					<label for="password"><code>&lt;input type="password" /&gt;</code> example</label>
 					<input id="password" type="password" placeholder="Password" />
 				</div>
 				
 				<div class="field">
-					<label for="address">&lt;textarea /&gt; example</label>
+					<label for="address"><code>&lt;textarea /&gt;</code> example</label>
 					<textarea id="address" placeholder="Comments"></textarea>
 				</div>
 			</fieldset>
