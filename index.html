@@ -23,14 +23,15 @@
     });
     </script>
 
-    <title>Enableplaceholders by scottc</title>
+    <title>Enableplaceholders jQuery plugin</title>
+    <meta name="description" content="A jQuery plugin to add HTML5 placeholder attribute support on older browsers." />
   </head>
 
   <body>
     <header>
       <div class="inner">
         <h1>Enableplaceholders</h1>
-        <h2>A jquery plugin to enable the HTML5 placeholder attribute on older browsers.</h2>
+        <h2>A jQuery plugin to add HTML5 placeholder attribute support on older browsers.</h2>
         <a href="https://github.com/scottc/enableplaceholders" class="button"><small>View project on</small>GitHub</a>
       </div>
     </header>
@@ -38,12 +39,38 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
+        
+        <h3>About</h3>
+        <p>The enableplaceholder jQuery plugin, will add placeholder <pre>attribute</pre> support for older browsers that do not have full HTML5 support, such as Internet Explorer 7.</p>
+        
+        <h3>How it works</h3>
+        <ol>
+        	<li>Checks to see if the browser does not support the <pre>placeholder</pre> attribute.</li>
+        	<li>Inserts the <pre>placeholder</pre> text into the <pre>value</pre> attribute.</li>
+        </ol>
+        
+        <h3>Features</h3>
+        <ul>
+        	<li>Is <em>very</em> tiny, fast &amp; lightweight.</li>
+        	<li>Does not add any additional elements to the DOM.</li>
+        	<li>Prevents the browser from POSTing placeholder text as form values.</li>
+        	<li>Does not depend on <pre>&lt;label /&gt;</pre>'s, or other elements.</li>
+        	<li>Support's <pre>&lt;input type="reset" /&gt;</pre> buttons.</li>
+        	<li>Free to use for any purpose, GPLv3 License.</li>
+        </ul>
+        
+        <h3>Disadvantages?</h3>
+        <p>Uses the <pre>value</pre> attribute, so you may have trouble with client-side form validation in some cases. However it's easy enough to add a custom validation event trigger.</p>
+
+        
           <h3>Example</h3>
 <pre><code>&lt;script&gt;
   $(function() {
     $("[placeholder]").enableplaceholder();
   });
 &lt;/script&gt;
+
+&lt;input type="text" placeholder="Username" /&gt;
 </code></pre>
 
 <h3>Demo</h3>
