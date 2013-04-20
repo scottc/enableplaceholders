@@ -45,26 +45,26 @@
         
         <h3>How it works</h3>
         <ol>
-        	<li>Checks to see if the browser does not support the <code>placeholder</code> attribute.</li>
+		<li>Checks to see if the browser does not support the <code>placeholder</code> attribute.</li>
         	<li>Inserts the <code>placeholder</code> text into the <code>value</code> attribute.</li>
         </ol>
         
         <h3>Features</h3>
         <ul>
-        	<li>Is <em>very</em> tiny, fast &amp; lightweight.</li>
-        	<li>Does not add any additional elements to the DOM.</li>
-        	<li>Prevents the browser from POSTing placeholder text as form values.</li>
+        	<li>Lightweight.</li>
         	<li>Does not depend on <code>&lt;label /&gt;</code>'s, or other elements.</li>
         	<li>Support's <code>&lt;input type="reset" /&gt;</code> buttons.</li>
+        	<li>Does not add any additional elements to the DOM.</li>
+        	<li>Prevents the browser from POSTing placeholder text as form values.</li>
         	<li>Feature detection, not browser detection.</li>
         	<li>Free to use for any purpose, GPLv3 License.</li>
         </ul>
         
         <h3>Disadvantages?</h3>
-        <p>Uses the <code>value</code> attribute, so you may have trouble with client-side form validation in some cases. However it's easy enough to add a custom validation event trigger.</p>
+        <p>Uses the <code>value</code> attribute, so you may have trouble with client-side form validation in some cases. However it's easy enough to add a custom event trigger, to call your validation.</p>
 
-        
-          <h3>Example</h3>
+        <h3>Example</h3>
+          
 <pre><code>&lt;script&gt;
   $(function() {
     $("[placeholder]").enableplaceholder();
