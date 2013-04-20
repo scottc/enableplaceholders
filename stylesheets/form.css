@@ -1,0 +1,48 @@
+label{
+	display:block;
+	margin:5px;
+}
+div.field{
+	margin:10px 5px;
+	width:200px;
+}
+fieldset{
+	-webkit-border-radius:5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+}
+input, textarea{
+	border:1px solid #888;
+	-webkit-border-radius:5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	
+	background:#ddd;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffd), to(#eec)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #ddd, #eee); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #ddd, #eee); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #ddd, #eee); /* IE10 */
+	background-image:      -o-linear-gradient(top, #ddd, #eee); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #ddd, #eee);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#dddddd', EndColorStr='#eeeeee'); /* IE6–IE9 */
+	
+	padding:10px;
+	color:#444;
+	width:200px;
+}
+
+input[type='submit'], input[type='reset']{
+width:auto;
+margin:5px;
+}
+
+input:focus, textarea:focus{
+	   -moz-box-shadow: 0 0 8px #99f, inset 0 0 5px #fff;
+	-webkit-box-shadow: 0 0 8px #99f, inset 0 0 5px #fff;
+			box-shadow: 0 0 8px #99f, inset 0 0 5px #fff;
+		
+		border:1px solid #777;
+		
+		color:#000;
+}
