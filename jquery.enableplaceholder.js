@@ -1,12 +1,11 @@
 /**
-*
-* @Author Scott Campbell
-* @Website github.com/scottc/
-* @Version 1.3a
-*
-* Adding placeholder support for those browsers who don't support it yet.
-*
-*/
+ *
+ * @Author Scott Campbell
+ * @Website github.com/scottc/
+ * @Version 1.3.0
+ * @License GPLv3
+ *
+ */
 
 (function ($) {
     $.fn.enableplaceholder = function () {
